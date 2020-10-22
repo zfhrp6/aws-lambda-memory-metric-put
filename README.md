@@ -1,10 +1,27 @@
-# Welcome to your CDK TypeScript project!
+# Overview
+mem2cw is CDK template for Lambda function 
+that Memory Usage as CloudWatch Metric Data using CloudWatchLogs subscription filter.
 
-This is a blank project for TypeScript development with CDK.
+Original CloudFormation template is in https://github.com/watanabeshuji/mem2cw .
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+# Usage
 
-## Useful commands
+Login to AWS management console and create CloudFormation stack with logs2sns.yml(logs2sns2.yml).
+See: http://dev.classmethod.jp/cloud/aws/send-lambda-memory-usage-to-cloudwatch/ 
+
+# CloudFormation Parameters
+
+- Namespace: Namespace for CloudWatch Metric
+
+# How it works?
+
+- Create IAM Role for Lambda function.
+- Create Lambda function process CloudWatch Logs streaming event (filter and put CloudWatch Metric).
+- Add permission to Lambda function to invoke from CloudWatch Logs
+
+# Useful commands
+
+this repository uses AWS CDK(Cloud Development Kit)
 
  * `npm run build`   compile typescript to js
  * `npm run watch`   watch for changes and compile
