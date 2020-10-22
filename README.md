@@ -12,10 +12,6 @@ mem2cw-stack is the body, and target-stack is for sample.
 
 See: http://dev.classmethod.jp/cloud/aws/send-lambda-memory-usage-to-cloudwatch/ 
 
-# CloudFormation Parameters
-
-- Namespace: Namespace for CloudWatch Metric
-
 # How it works?
 
 - Create IAM Role for Lambda function.
