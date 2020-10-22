@@ -6,7 +6,10 @@ Original CloudFormation template is in https://github.com/watanabeshuji/mem2cw .
 
 # Usage
 
-Login to AWS management console and create CloudFormation stack with logs2sns.yml(logs2sns2.yml).
+`yarn && yarn build && yarn cdk deploy '*'` will create mem2cw-stack and target-stack.
+
+mem2cw-stack is the body, and target-stack is for sample.
+
 See: http://dev.classmethod.jp/cloud/aws/send-lambda-memory-usage-to-cloudwatch/ 
 
 # CloudFormation Parameters
@@ -19,7 +22,7 @@ See: http://dev.classmethod.jp/cloud/aws/send-lambda-memory-usage-to-cloudwatch/
 - Create Lambda function process CloudWatch Logs streaming event (filter and put CloudWatch Metric).
 - Add permission to Lambda function to invoke from CloudWatch Logs
 
-# Useful commands
+# Useful CDK commands
 
 this repository uses AWS CDK(Cloud Development Kit)
 
