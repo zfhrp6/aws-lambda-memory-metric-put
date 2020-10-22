@@ -16,7 +16,8 @@ export class TargetStack extends cdk.Stack {
         super(scope, id, props);
 
         const targetFn = new lambda.Function(this, 'target-function', {
-            code: lambda.Code.fromInline('exports.handler = function (input: any, context: any, callback: any) {};'),
+            // empty lambda function
+            code: lambda.Code.fromInline('exports.handler = function (input, context, callback) {};'),
             handler: 'index.handler',
             runtime: lambda.Runtime.NODEJS_12_X,
         });
