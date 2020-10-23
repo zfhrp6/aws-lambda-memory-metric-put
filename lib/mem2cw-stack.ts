@@ -12,16 +12,17 @@ export class Mem2CwStack extends cdk.Stack {
       handler: 'mem2cw.handler',
       runtime: lambda.Runtime.NODEJS_12_X,
       logRetention: logs.RetentionDays.ONE_YEAR,
-      timeout: cdk.Duration.seconds(3)
+      timeout: cdk.Duration.seconds(3),
     });
     mem2cwFn.addToRolePolicy(
       new iam.PolicyStatement({
         actions: ['cloudwatch:PutMetricData'],
         effect: iam.Effect.ALLOW,
-        resources: ['*']
-      })
+        resources: ['*'],
+      }),
     );
     this.mem2cwFn = mem2cwFn;
   }
+
   mem2cwFn: lambda.IFunction;
 }

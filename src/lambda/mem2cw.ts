@@ -13,8 +13,8 @@ const extract = (message: string): { usedMemory: number, limitMemory: number, } 
   if (match === undefined || match?.groups === undefined) {
     return null;
   }
-  return { usedMemory: Number(match.groups.usedMemory), limitMemory: Number(match.groups.limitMemory) }
-}
+  return { usedMemory: Number(match.groups.usedMemory), limitMemory: Number(match.groups.limitMemory) };
+};
 
 const createMetricData = (functionName: string, usedMemory: number, limitMemory: number): PutMetricDataInput => {
   const metricDatum: MetricDatum = {
@@ -27,24 +27,23 @@ const createMetricData = (functionName: string, usedMemory: number, limitMemory:
     ],
     Unit: 'Percent',
     Value: 100.0 * usedMemory / limitMemory,
-  }
+  };
 
   return {
     Namespace: NAMESPACE,
     MetricData: [
       metricDatum,
     ],
-  }
-}
+  };
+};
 
 export const handler = async (event: CloudWatchLogsEvent): Promise<any> => {
-  const data: CloudWatchLogsDecodedData
-    = JSON.parse(zlib.gunzipSync(Buffer.from(event.awslogs.data, 'base64')).toString('utf-8'));
+  const data: CloudWatchLogsDecodedData = JSON.parse(zlib.gunzipSync(Buffer.from(event.awslogs.data, 'base64')).toString('utf-8'));
   const functionName = <string>data.logGroup.split('/').pop();
   const metricData = data.logEvents
-    .map(event => extract(event.message))
-    .filter(e => e !== null)
-    .map(memoryInfo => createMetricData(functionName, memoryInfo!.usedMemory, memoryInfo!.limitMemory));
+    .map((event) => extract(event.message))
+    .filter((e) => e !== null)
+    .map((memoryInfo) => createMetricData(functionName, memoryInfo!.usedMemory, memoryInfo!.limitMemory));
   console.log(JSON.stringify(metricData));
-  return Promise.all(metricData.map(datum => cloudwatch.putMetricData(datum).promise()));
-}
+  return Promise.all(metricData.map((datum) => cloudwatch.putMetricData(datum).promise()));
+};
