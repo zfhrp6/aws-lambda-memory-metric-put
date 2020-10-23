@@ -29,3 +29,11 @@ jobs:
         run: npm run build
       - name: test
         run: npm run test
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: dependency install
+        run: npm install
+      - name: lint
+        run: npx eslint . --ext .ts
