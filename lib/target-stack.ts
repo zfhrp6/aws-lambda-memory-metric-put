@@ -23,7 +23,8 @@ export class TargetStack extends cdk.Stack {
         });
         targetFn.logGroup.addSubscriptionFilter('mem2cw-subscription', {
             destination: new destinations.LambdaDestination(props.mem2cw),
-            filterPattern: logs.FilterPattern.allEvents(),
+            // Lambda execution info log contains `REPORT`.
+            filterPattern: logs.FilterPattern.literal('REPORT'),
         });
     }
 }
