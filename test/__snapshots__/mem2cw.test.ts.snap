@@ -3,28 +3,28 @@
 exports[`Snapshot Test 1`] = `
 Object {
   "Parameters": Object {
-    "AssetParameters5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1cArtifactHash7B87B150": Object {
-      "Description": "Artifact hash for asset \\"5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1c\\"",
+    "[HASH REMOVED]": Object {
+      "Description": "[HASH REMOVED]",
       "Type": "String",
     },
-    "AssetParameters5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1cS3Bucket088B9F9A": Object {
-      "Description": "S3 bucket for asset \\"5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1c\\"",
+    "[HASH REMOVED]": Object {
+      "Description": "[HASH REMOVED]",
       "Type": "String",
     },
-    "AssetParameters5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1cS3VersionKey249B57FC": Object {
-      "Description": "S3 key for asset version \\"5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1c\\"",
+    "[HASH REMOVED]": Object {
+      "Description": "[HASH REMOVED]",
       "Type": "String",
     },
-    "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24ArtifactHashBA91B77F": Object {
-      "Description": "Artifact hash for asset \\"67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24\\"",
+    "[HASH REMOVED]": Object {
+      "Description": "[HASH REMOVED]",
       "Type": "String",
     },
-    "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3Bucket4D46ABB5": Object {
-      "Description": "S3 bucket for asset \\"67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24\\"",
+    "[HASH REMOVED]": Object {
+      "Description": "[HASH REMOVED]",
       "Type": "String",
     },
-    "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3VersionKeyB0F28861": Object {
-      "Description": "S3 key for asset version \\"67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24\\"",
+    "[HASH REMOVED]": Object {
+      "Description": "[HASH REMOVED]",
       "Type": "String",
     },
   },
@@ -37,7 +37,7 @@ Object {
       "Properties": Object {
         "Code": Object {
           "S3Bucket": Object {
-            "Ref": "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3Bucket4D46ABB5",
+            "Ref": "[HASH REMOVED]",
           },
           "S3Key": Object {
             "Fn::Join": Array [
@@ -50,7 +50,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3VersionKeyB0F28861",
+                          "Ref": "[HASH REMOVED]",
                         },
                       ],
                     },
@@ -63,7 +63,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters67b7823b74bc135986aa72f889d6a8da058d0c4a20cbc2dfc6f78995fdd2fc24S3VersionKeyB0F28861",
+                          "Ref": "[HASH REMOVED]",
                         },
                       ],
                     },
@@ -147,7 +147,7 @@ Object {
       "Properties": Object {
         "Code": Object {
           "S3Bucket": Object {
-            "Ref": "AssetParameters5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1cS3Bucket088B9F9A",
+            "Ref": "[HASH REMOVED]",
           },
           "S3Key": Object {
             "Fn::Join": Array [
@@ -160,7 +160,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1cS3VersionKey249B57FC",
+                          "Ref": "[HASH REMOVED]",
                         },
                       ],
                     },
@@ -173,7 +173,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParameters5fddedf7eea50ba562afffff57cccb0e0e302a891e2ab6f407224a86fc0b1c1cS3VersionKey249B57FC",
+                          "Ref": "[HASH REMOVED]",
                         },
                       ],
                     },
