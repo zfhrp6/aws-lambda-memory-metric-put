@@ -6,7 +6,7 @@ Original CloudFormation template is in https://github.com/watanabeshuji/mem2cw .
 
 # Usage
 
-`yarn && yarn build && yarn cdk deploy '*'` will create mem2cw-stack and target-stack.
+`npm install && npm run build && npx cdk deploy '*'` will create mem2cw-stack and target-stack.
 
 mem2cw-stack is the body, and target-stack is for sample.
 

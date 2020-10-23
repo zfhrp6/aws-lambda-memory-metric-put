@@ -1,8 +1,9 @@
 #!/usr/bin/env node
+/* eslint-disable no-new */
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { Mem2CwStack } from '../lib/mem2cw-stack';
 import { TargetStack } from '../lib/target-stack';
+import { Mem2CwStack } from '../lib/mem2cw-stack';
 
 const app = new cdk.App();
 // this stack contains mem2cw

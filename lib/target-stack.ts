@@ -8,7 +8,7 @@ import * as cdk from '@aws-cdk/core';
  */
 
 export interface TargetStackProps extends cdk.StackProps {
-    mem2cw: lambda.IFunction;
+  mem2cw: lambda.IFunction;
 }
 
 export class TargetStack extends cdk.Stack {
