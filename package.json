@@ -1,6 +1,6 @@
 {
   "name": "mem2cw",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "bin": {
     "mem2cw": "bin/mem2cw.js"
   },
@@ -17,11 +17,11 @@
     "@types/aws-sdk": "^2.7.0",
     "@types/jest": "^26.0.15",
     "@types/node": "14.14.6",
-    "@typescript-eslint/eslint-plugin": "^4.6.1",
-    "@typescript-eslint/parser": "^4.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
     "aws-cdk": "1.74.0",
     "aws-sdk": "^2.791.0",
-    "eslint": "^7.12.1",
+    "eslint": "^7.14.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
