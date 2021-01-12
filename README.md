@@ -1,4 +1,7 @@
 # Overview
+
+This is outdated, *use [Lambda insights](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-insights.html).*
+
 mem2cw is CDK template for Lambda function 
 that Memory Usage as CloudWatch Metric Data using CloudWatchLogs subscription filter.
 
